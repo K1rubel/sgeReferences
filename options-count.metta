@@ -38,6 +38,8 @@
                       ;; the gene list will be filled taking an integer in the range 0 to N-1, N being the number options for each symbol as calculated above
                       ;; the length of the list is determined by the upper bounds function
                       ;; Example 
-                      ;; S -- it is the start symbol and appears only once but it has two options for expansion
+                      ;; S -- it is the start symbol and appears only once (upper bound of 1) but it has two options for expansion
                       ;; gene for S -- could be one of these --chosing randomly from the range 0--[2-1] == 0--1 
-                      ;; [0 0], [0 1], [1 0], [1 1]
+                      ;; it could be option 0 or 1 which ever is selected by chance
+                      ;; if it is 0 expansion starts from --> (bop expr expr)
+                      ;; it it is 1 it will be --> expr
