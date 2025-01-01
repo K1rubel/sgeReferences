@@ -153,3 +153,12 @@
 (= (append $acc $el)
         (collapse (union (superpose $acc) (superpose ($el))))
 )
+
+;; counts the number of atoms in an expression
+
+(= (++n $atom)
+    (if (== $atom ())
+        0
+        (+ 1 (++n (cdr-atom $atom)))
+    )
+)
